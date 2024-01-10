@@ -1,6 +1,10 @@
+
 const BookingCard = (props) => {
     return (
-        <div class="box-border bg-cyan-500 basis-1/3 rounded-full p-8 m-8 shadow-2xl shadow-cyan-500/50">
+        <div class="box-border bg-gray-200 basis-1/3 rounded-lg m-8 shadow-2xl shadow-gray-500/50">
+          <div>
+            <img src={props.image}/>
+          </div>
           <div>
             {props.name}
           </div>
