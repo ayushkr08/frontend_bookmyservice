@@ -5,11 +5,13 @@ const BookingCard = (props) => {
           <div>
             <img src={props.image}/>
           </div>
-          <div>
+          <div className="m-3 font-medium tracking-widest">
             {props.name}
           </div>
-          <div>
-            <button>Book Now</button>
+          <div className="flex justify-center">
+            <div className="m-4 box-border bg-gray-300 p-4 hover:bg-gray-500 w-1/3 cursor-pointer">
+              <button className="tracking-wide">Book Now</button>
+            </div>
           </div>
         </div>
     )
