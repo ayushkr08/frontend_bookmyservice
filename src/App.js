@@ -15,7 +15,7 @@ const App = () => {
     <div>
       <Header />
       <ServiceList onServiceSelect={handleServiceSelect} />
-      {selectedService && <BookingForm selectedService={selectedService} />}
+      {/* {selectedService && <BookingForm selectedService={selectedService} />} */}
     </div>
   );
 };
