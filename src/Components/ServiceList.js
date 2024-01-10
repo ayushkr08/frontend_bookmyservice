@@ -17,9 +17,6 @@ const ServiceList = ({ onServiceSelect }) => {
       </div>
       <div class= "flex flex-row text-center text-white">
         {services.map((element) => <BookingCard name={element.name}/>)}
-        {/* <BookingCard name="Maid"/>
-        <BookingCard name="Cook"/>
-        <BookingCard name="Electrician"/> */}
       </div>
     </div>
   );
