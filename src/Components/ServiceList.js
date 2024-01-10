@@ -1,24 +1,23 @@
 // ServiceList.js
 import React from 'react';
+import BookingCard from './BookingCard';
 
 const ServiceList = ({ onServiceSelect }) => {
   const services = [
-    { id: 1, name: 'Plumbing' },
-    { id: 2, name: 'Electrician' },
-    { id: 3, name: 'Cleaning' },
+    { id: 1, name: 'Maid' },
+    { id: 2, name: 'Cook' },
+    { id: 3, name: 'Electrician' },
     // Add more services as needed
   ];
 
   return (
     <div>
-      <h2>Available Services</h2>
-      <ul>
-        {services.map((service) => (
-          <li key={service.id} onClick={() => onServiceSelect(service)}>
-            {service.name}
-          </li>
-        ))}
-      </ul>
+      <div>
+        <h2> Available Services</h2>
+      </div>
+      <div class= "flex flex-row text-center text-white">
+        {services.map((element) => <BookingCard name={element.name}/>)}
+      </div>
     </div>
   );
 };
