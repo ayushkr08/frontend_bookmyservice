@@ -15,7 +15,8 @@ const App = () => {
     <div>
       <Header />
       <ServiceList onServiceSelect={handleServiceSelect} />
-      {/* {selectedService && <BookingForm selectedService={selectedService} />} */}
+      {/* // BookingForm
+      //outlet */}
     </div>
   );
 };

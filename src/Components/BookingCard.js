@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 
 const BookingCard = (props) => {
     return (
@@ -8,11 +9,14 @@ const BookingCard = (props) => {
           <div className="m-3 font-medium tracking-widest">
             {props.name}
           </div>
-          <div className="flex justify-center">
-            <div className="m-4 box-border bg-gray-300 p-4 hover:bg-gray-500 w-1/3 cursor-pointer">
-              <button className="tracking-wide">Book Now</button>
+            <Link to='/book'> 
+            {/* TODO : the whole div is clickable we have to correct the CSS */}
+            <div className="flex justify-center">
+              <div className="m-4 box-border bg-gray-300 p-4 hover:bg-gray-500 w-1/3 cursor-pointer">
+                <button className="tracking-wide">Book Now</button>
+              </div>
             </div>
-          </div>
+            </Link>
         </div>
     )
 }
