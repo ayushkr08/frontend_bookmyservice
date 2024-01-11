@@ -4,19 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import BookingForm from './Components/BookingForm';
+import { appRoutes } from './App';
+// import BookingForm from './Components/BookingForm';
 
-
-const appRoutes = createBrowserRouter([
-  {
-    path: '/',
-    element: <App/>,
-  },
-  {
-    path: '/book',
-    element: <BookingForm/>,
-  }
-])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
