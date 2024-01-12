@@ -1,15 +1,13 @@
 import {useParams} from 'react-router-dom'
 import WorkerCard from './WorkerCard';
+import { maidData } from '../DummyData/maidData';
 const WorkerList = () => {
-  let data = {
-        Name: 'Alexander Garner',
-        Distance: 0.8,
-        Rating: 4.2,
-        Price: 100,
-        Experience: 3.5
-    }
   return(
-    <WorkerCard data={data}/>
+    <>
+    {maidData.map((singleWorker) => {
+      return <WorkerCard data={singleWorker}/>
+    })}
+    </>
   )
 }
 export default WorkerList;
