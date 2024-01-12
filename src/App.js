@@ -2,9 +2,10 @@
 import React, { useState } from 'react';
 import Header from './Components/Header';
 import ServiceList from './Components/ServiceList';
-import BookingForm from './Components/BookingForm';
+import WorkerList from './Components/WorkerList';
 import {createBrowserRouter,Outlet} from 'react-router-dom'
 import BookingCard from './Components/BookingCard';
+import WorkerCard from './Components/WorkerCard';
 
 const App = () => {
   return (
@@ -27,7 +28,7 @@ export const appRoutes = createBrowserRouter([
       },
       {
         path: '/book/:service',
-        element: <BookingForm/>
+        element: <WorkerList/>
       }
     ]
   },

@@ -1,7 +1,7 @@
 // ServiceList.js
 import React from 'react';
 import BookingCard from './BookingCard';
-import BookingForm from './BookingForm';
+import WorkerList from './WorkerList';
 import Maidpicture from '../Assets/maid.png';
 import cookpicture from '../Assets/cook.png';
 import electricianpicture from '../Assets/electrician.png';
