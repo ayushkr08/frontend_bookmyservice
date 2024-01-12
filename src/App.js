@@ -4,10 +4,9 @@ import Header from './Components/Header';
 import ServiceList from './Components/ServiceList';
 import BookingForm from './Components/BookingForm';
 import {createBrowserRouter,Outlet} from 'react-router-dom'
+import BookingCard from './Components/BookingCard';
 
 const App = () => {
-  
-
   return (
     <div>
       <Header />
@@ -27,8 +26,8 @@ export const appRoutes = createBrowserRouter([
 
       },
       {
-        path: '/book',
-        element: <BookingForm/>,
+        path: '/book/:service',
+        element: <BookingForm/>
       }
     ]
   },

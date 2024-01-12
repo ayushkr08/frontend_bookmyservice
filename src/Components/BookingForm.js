@@ -1,7 +1,13 @@
+import {useParams} from 'react-router-dom'
 const BookingForm = () => {
+  let service = useParams();
+  console.log("service", service);
   return(
-    <h2> booking now page</h2>
-
+    <div>
+      <h1>
+        book for {service.service}
+      </h1>
+    </div>
   )
 }
 export default BookingForm;
