@@ -1,9 +1,11 @@
 // ServiceList.js
 import React from 'react';
 import BookingCard from './BookingCard';
+import BookingForm from './BookingForm';
 import Maidpicture from '../Assets/maid.png';
 import cookpicture from '../Assets/cook.png';
 import electricianpicture from '../Assets/electrician.png';
+
 
 const ServiceList = ({ onServiceSelect }) => {
   const services = [
@@ -15,14 +17,13 @@ const ServiceList = ({ onServiceSelect }) => {
 
   return (
     <div>
-      <div class="text-center font-semibold tracking-wide text-2xl">
+      <div className="text-center font-semibold tracking-wide text-2xl">
         <h1> Available Services</h1>
       </div>
-      <div class= "flex flex-row text-center">
-        {services.map((element) => <BookingCard name={element.name} image={element.picture}/>)}
+      <div className= "flex flex-row text-center">
+        {services.map((element) => <BookingCard key={element.name} name={element.name} image={element.picture}/>)}
       </div>
     </div>
   );
 };
-
 export default ServiceList;
