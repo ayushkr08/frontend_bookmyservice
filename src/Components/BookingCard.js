@@ -1,9 +1,10 @@
 import {Link} from 'react-router-dom'
 import {DateTimePicker,LocalizationProvider} from '@mui/x-date-pickers'
 import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs'
-
+import {useState} from 'react'
 
 const BookingCard = (props) => {
+  let [canBookNow, setCanBookNow] = useState(false);
     return (
         <div className="box-border bg-gray-200 basis-1/3 rounded-lg m-8 shadow-2xl shadow-gray-500/50">
           <div>
@@ -15,7 +16,14 @@ const BookingCard = (props) => {
           <div>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DateTimePicker 
-                onChange={(date_time,validation) => {console.log("onchange",date_time, validation)}} 
+                onChange={(date_time,validation) => {
+                  console.log("onchange",date_time, validation);
+                  if (validation.validationError === 'invalidDate') {
+                    setCanBookNow(false);
+                  } else {
+                    setCanBookNow(true);
+                  }
+                }}
                 onAccept={(a) => {console.log("onaccept", a)}}
                 onClose={() => {console.log("onclose")}}
                 disablePast={true}
@@ -25,7 +33,7 @@ const BookingCard = (props) => {
             <div className="flex justify-center">
               <div className="m-4 box-border bg-gray-300 p-4 hover:bg-gray-500 w-1/3">
                 <Link to={"/book/" + props.name}> 
-                  <button className="tracking-wide" disabled={false}>Book Now</button>
+                  <button className="tracking-wide" disabled={!canBookNow}>Book Now</button>
                 </Link>
               </div>
             </div>
