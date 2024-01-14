@@ -5,7 +5,7 @@ const WorkerList = () => {
   return(
     <>
     {maidData.map((singleWorker) => {
-      return <WorkerCard data={singleWorker}/>
+      return <WorkerCard key={singleWorker.Name} data={singleWorker}/>
     })}
     </>
   )
