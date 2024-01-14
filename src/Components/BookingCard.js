@@ -6,6 +6,7 @@ import Tooltip from '@mui/material/Tooltip'
 
 const BookingCard = (props) => {
   let [canBookNow, setCanBookNow] = useState(false);
+  let [toolTipOpen, setToolTipOpen] = useState(false);
     return (
         <div className="box-border bg-gray-200 basis-1/3 rounded-lg m-8 shadow-2xl shadow-gray-500/50">
           <div>
@@ -33,22 +34,23 @@ const BookingCard = (props) => {
             </LocalizationProvider>
           </div>
             <div className="flex justify-center">
-              {/**
-               * IF canBookNow boolean is true, then no need to show the tooltip over the booknow button
-               * otherwise show the tooltip
-               */}
-              {canBookNow ? (
-                <div className="m-4 box-border bg-gray-300 p-4 hover:bg-gray-500 w-1/3">
-                  <Link to={"/book/" + props.name}> 
-                      <button className="tracking-wide" disabled={!canBookNow}>Book Now</button>
-                  </Link>
-                </div>) : (<Tooltip title="Choose preferred slot" placement="right">
+              <Tooltip title="Choose preferred slot" placement="right"
+                open={toolTipOpen}
+                onOpen = {() => {
+                  if (canBookNow) {
+                    setToolTipOpen(false);
+                  } else {
+                    setToolTipOpen(true);
+                  }
+                }}
+                onClose = {() => setToolTipOpen(false)}
+                >
                 <div className="m-4 box-border bg-gray-300 p-4 hover:bg-gray-500 w-1/3">
                   <Link to={"/book/" + props.name}> 
                       <button className="tracking-wide" disabled={!canBookNow}>Book Now</button>
                   </Link>
                 </div>
-              </Tooltip>)}
+              </Tooltip>
             </div>
         </div>
     )
