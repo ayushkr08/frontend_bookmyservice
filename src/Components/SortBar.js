@@ -9,11 +9,11 @@ const SortBar = (props) => {
         <FontAwesomeIcon icon={faArrowsUpDown} />
       </div>
       <div className="space-x-1">
-        <button>Price</button>
+        <button onClick={props.priceClickHandler}>Price</button>
         <FontAwesomeIcon icon={faArrowsUpDown} />
       </div>
       <div className="space-x-1">
-        <button>Distance</button>
+        <button onClick={props.distanceClickHandler}>Distance</button>
         <FontAwesomeIcon icon={faArrowsUpDown} />
       </div>
     </div>
