@@ -8,8 +8,14 @@ const Header = () => {
     <div className='bg-gray-200 h-20 px-40 flex flex-row'>
       <Link to='/' className='inline-flex'>
         <img src={icon}></img>
+        <header className='font-bold py-6 px-5 text-2xl'>BookMyService</header>
       </Link>
-      <header className='font-bold py-6 px-5 text-2xl'>BookMyService</header>
+      <div className='flex justify-end w-full'>
+        <button className="box-border bg-gray-300">
+          Login/Signup
+        </button>
+      </div>
+
     </div>
   )
 };
