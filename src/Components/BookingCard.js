@@ -54,6 +54,7 @@ const BookingCard = (props) => {
           open={toolTipOpen}
           onOpen={toolTipOpenHandler}
           onClose={toolTipCloseHandler}
+          arrow
         >
           <div className="m-4 box-border bg-gray-300 p-4 hover:bg-gray-500 w-1/3">
             <Link to={"/book/" + props.name}>
