@@ -46,6 +46,7 @@ const BookingCard = (props) => {
       <div>
         <LocalizationProvider dateAdapter={AdapterDayjs}>
           <DateTimePicker
+            closeOnSelect={false}
             onChange={dateTimePickerOnChangeHandler}
             disablePast={true}
             label="Choose Your Slot"
