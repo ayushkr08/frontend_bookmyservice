@@ -16,6 +16,11 @@ const BookingCard = (props) => {
       setCanBookNow(true);
     }
   };
+  const shouldDisableTime = (dateTime) => {
+    const hour = dateTime.hour();
+    return hour < 8 || hour > 22; // Disable before 8 AM and after 8 PM
+  };
+
 
   let toolTipOpenHandler = () => {
     /**
@@ -44,6 +49,7 @@ const BookingCard = (props) => {
             onChange={dateTimePickerOnChangeHandler}
             disablePast={true}
             label="Choose Your Slot"
+            shouldDisableTime={shouldDisableTime}
           />
         </LocalizationProvider>
       </div>
