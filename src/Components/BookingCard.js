@@ -55,7 +55,7 @@ const BookingCard = (props) => {
         </LocalizationProvider>
       </div>
       <div className="flex justify-center">
-        <Tooltip
+        <Tooltip 
           title="Choose preferred slot"
           placement="right"
           open={toolTipOpen}
