@@ -10,7 +10,7 @@ const BookingCard = (props) => {
 
   let dateTimePickerOnChangeHandler = (date_time, validation) => {
     console.log("onchange", date_time, validation);
-    if (validation.validationError === "invalidDate") {
+    if (validation.validationError === "invalidDate" || validation.validationError === "shouldDisableTime-hours") {
       setCanBookNow(false);
     } else {
       setCanBookNow(true);
@@ -55,7 +55,7 @@ const BookingCard = (props) => {
         </LocalizationProvider>
       </div>
       <div className="flex justify-center">
-        <Tooltip
+        <Tooltip 
           title="Choose preferred slot"
           placement="right"
           open={toolTipOpen}
