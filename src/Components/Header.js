@@ -1,4 +1,3 @@
-// Header.js
 import React from 'react';
 import icon from '../Assets/icon.png';
 import { Link } from 'react-router-dom';
