@@ -20,8 +20,6 @@ const BookingCard = (props) => {
     const hour = dateTime.hour();
     return hour < 8 || hour > 22; // Disable before 8 AM and after 8 PM
   };
-
-
   let toolTipOpenHandler = () => {
     /**
      * Open the tooltip only when the handler is closed and you can't book due to invalid date being picked
