@@ -7,6 +7,7 @@ import BookingCard from "./Components/BookingCard";
 import WorkerCard from "./Components/WorkerCard";
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode"
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -24,6 +25,8 @@ const App = () => {
       </GoogleOAuthProvider> */}
       <Header />
       <Outlet />
+      <Footer />
+
     </div>
   );
 };
