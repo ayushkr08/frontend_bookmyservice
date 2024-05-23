@@ -60,8 +60,8 @@ const Header = () => {
           {location}
         </button>
         {address && (
-          <div className="address-box ml-4 p-2 bg-white border border-gray-300 rounded shadow-md max-w-xs overflow-hidden text-ellipsis whitespace-nowrap">
-            <p className="text-gray-800">{address}</p>
+          <div className="address-box ml-4 p-2 bg-white border border-gray-300 rounded shadow-md max-w-xs overflow-x-auto">
+            <p className="text-gray-800 text-sm whitespace-nowrap">{address}</p>
           </div>
         )}
         <GoogleOAuthProvider clientId="515842943475-413dupstc405bnsca0p6aiv38vh3ejhu.apps.googleusercontent.com">
