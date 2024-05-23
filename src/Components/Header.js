@@ -60,7 +60,7 @@ const Header = () => {
           {location}
         </button>
         {address && (
-          <div className="address-box ml-4 p-2 bg-white border border-gray-300 rounded shadow-md">
+          <div className="address-box ml-4 p-2 bg-white border border-gray-300 rounded shadow-md max-w-xs overflow-hidden text-ellipsis whitespace-nowrap">
             <p className="text-gray-800">{address}</p>
           </div>
         )}
