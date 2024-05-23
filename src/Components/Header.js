@@ -38,7 +38,7 @@ const Header = () => {
         const { house_number, road, neighbourhood, suburb, county, state, country } = data.address;
         const formattedAddress = `${house_number ? house_number + ', ' : ''}${road ? road + ', ' : ''}${neighbourhood ? neighbourhood + ', ' : ''}${suburb ? suburb + ', ' : ''}${county ? county + ', ' : ''}${state ? state + ', ' : ''}${country ? country : ''}`;
         setAddress(formattedAddress);
-        setLocation('Location Found');
+        setLocation('Location');
       } else {
         console.error('Reverse geocoding error: No address found');
         setLocation('Address not found');
