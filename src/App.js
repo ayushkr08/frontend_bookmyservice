@@ -11,7 +11,7 @@ import Footer from "./Components/Footer";
 
 const App = () => {
   return (
-    <div>
+    <div className="min-h-screen">
       {/* <GoogleOAuthProvider clientId="515842943475-413dupstc405bnsca0p6aiv38vh3ejhu.apps.googleusercontent.com">
         <GoogleLogin
           onSuccess={credentialResponse => {
