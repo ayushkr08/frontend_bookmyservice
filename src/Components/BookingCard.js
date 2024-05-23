@@ -61,7 +61,7 @@ const BookingCard = (props) => {
           onClose={toolTipCloseHandler}
           arrow
         >
-          <div className="m-4 box-border bg-gray-300 p-4 hover:bg-gray-500 w-1/3">
+          <div className="m-4 box-border bg-gray-300 p-4 hover:bg-cyan-600 w-1/3">
             <Link to={"/book/" + props.name}>
               <button className="tracking-wide" disabled={!canBookNow}>
                 Book Now

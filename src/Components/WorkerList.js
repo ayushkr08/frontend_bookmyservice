@@ -8,7 +8,7 @@ let isDistanceSortedHighToLow = null;
 const WorkerList = () => {
   let [localMaidData, setlocalMaidData] = useState(maidData);
   const sortDataBasedOnProperty = (propertyName) => {
-    // ALways make a copy of state variable if you are going to change it.
+    // Always make a copy of state variable if you are going to change it.
     let copyOfLocalMaidData = JSON.parse(JSON.stringify(localMaidData));
     copyOfLocalMaidData.sort((maid1, maid2) => {
       switch (propertyName) {
