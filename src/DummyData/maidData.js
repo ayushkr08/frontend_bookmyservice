@@ -3,7 +3,7 @@ export let  maidData = [
         Name: 'Sri Devi',
         Distance: 0.8,
         Rating: 4,
-        Price: 100,
+        Price: 200,
         Experience: 3.5
     },
     {
