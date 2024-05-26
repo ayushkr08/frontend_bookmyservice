@@ -4,8 +4,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const PaymentConfirmation = () => {
     const location = useLocation();
     const navigate = useNavigate();
-    const bookingDate = location.state?.bookingDate || 'Fri, 23rd May';
-    const bookingTime = location.state?.bookingTime || '10-11 AM';
+    const bookingDate = location.state?.bookingDate || 'Fri, 27th May';
+    const bookingTime = location.state?.bookingTime || '12-1 PM';
     const bookingAmount = location.state?.bookingAmount || 200;
     const gst = bookingAmount * 0.18;
     const totalAmount = bookingAmount + gst;
