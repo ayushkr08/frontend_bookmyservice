@@ -1,17 +1,17 @@
 export let  maidData = [
     {
-        Name: 'Sri Devi',
+        Name: 'Julia',
         Distance: 0.8,
         Rating: 4,
         Price: 200,
-        Experience: 3.5
+        Experience: 3
     },
     {
-        Name: 'Ram',
+        Name: 'Aston',
         Distance: 1.0,
         Rating: 4.5,
         Price: 200,
-        Experience: 3.5
+        Experience: 2.5
     },
     {
         Name: 'Abdul',
