@@ -3,11 +3,16 @@ import Header from "./Components/Header";
 import ServiceList from "./Components/ServiceList";
 import WorkerList from "./Components/WorkerList";
 import { createBrowserRouter, Outlet } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BookingCard from "./Components/BookingCard";
 import WorkerCard from "./Components/WorkerCard";
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import { jwtDecode } from "jwt-decode"
 import Footer from "./Components/Footer";
+import Payment from './Components/Payment';
+import PaymentConfirmation from './Components/PaymentConfirmation';
+import PaymentPage from './Components/PaymentPage';
+
 
 const App = () => {
   return (
@@ -44,6 +49,14 @@ export const appRoutes = createBrowserRouter([
         path: "/book/:service",
         element: <WorkerList />,
       },
+      {
+        path: "/payment",
+        element: <PaymentConfirmation />,
+      },
+      // {
+      //   path: "/",
+      //   element: <PaymentConfirmation />,
+      // },
     ],
   },
 ]);
