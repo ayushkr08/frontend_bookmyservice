@@ -35,7 +35,7 @@ const WorkerCard = (props) => {
           Book now
         </button> */}
         <Link
-          to="/payment"
+          to="/payment-confirmation"
           state={{ bookingDate: props.data.date, bookingAmount: props.data.price }} // Pass booking details as state
           className="box-border bg-gray-300 py-2 px-4 rounded-lg text-xl text-center w-full md:w-auto"
         >

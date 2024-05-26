@@ -12,6 +12,8 @@ import Footer from "./Components/Footer";
 import Payment from './Components/Payment';
 import PaymentConfirmation from './Components/PaymentConfirmation';
 import PaymentPage from './Components/PaymentPage';
+import AboutUs from './Components/AboutUs';
+import BMSReviews from './Components/BMSReviews';
 
 
 const App = () => {
@@ -51,7 +53,19 @@ export const appRoutes = createBrowserRouter([
       },
       {
         path: "/payment",
+        element: <PaymentPage />,
+      },
+      {
+        path: "/payment-confirmation",
         element: <PaymentConfirmation />,
+      },
+      {
+        path: "/about",
+        element: <AboutUs />,
+      },
+      {
+        path: "/reviews",
+        element: <BMSReviews />,
       },
       // {
       //   path: "/",

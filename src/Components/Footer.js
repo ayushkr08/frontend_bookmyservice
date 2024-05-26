@@ -14,12 +14,12 @@ const Footer = () => {
                     <h1 className="text-base font-semibold mb-2 text-black">For Customers</h1>
                     <ul className="list-none pl-0">
                         <li className="mb-2">
-                            <Link to="#" className="text-gray-600 hover:underline">
+                            <Link to="/about" className="text-gray-600 hover:underline">
                                 About us
                             </Link>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-gray-600 hover:underline">
+                            <Link to="/reviews" className="text-gray-600 hover:underline">
                                 BMS reviews
                             </Link>
                         </li>
@@ -44,17 +44,17 @@ const Footer = () => {
                     <h1 className="text-base font-semibold mb-2 text-black">Social links</h1>
                     <ul className="list-none pl-0">
                         <li className="mb-2">
-                            <Link to="#" className="text-gray-600 hover:underline">
+                            <Link to="https://medium.com/" className="text-gray-600 hover:underline">
                                 Blog
                             </Link>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-gray-600 hover:underline">
+                            <Link to="https://www.apple.com/in/app-store/" className="text-gray-600 hover:underline">
                                 App Store
                             </Link>
                         </li>
                         <li className="mb-2">
-                            <Link to="#" className="text-gray-600 hover:underline">
+                            <Link to="https://play.google.com/store/apps" className="text-gray-600 hover:underline">
                                 Google Play
                             </Link>
                         </li>
