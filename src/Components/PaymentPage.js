@@ -1,44 +1,45 @@
-// PaymentPage.js
 import React from 'react';
-import { loadStripe } from '@stripe/stripe-js';
 import { useLocation } from 'react-router-dom';
-
-// Replace with your actual Stripe public key
-const stripePromise = loadStripe('pk_test_51PKZTNSI0MgMJZBHD6bklmMy6Z6U7XzwwMaJUF61jh0IrWs3tQsBd5MIVrKFS20SC38duz04CRk2z57JDnoqxQ8H00H17WWG2r');
 
 const PaymentPage = () => {
     const location = useLocation();
-    const amount = location.state?.amount || 0;
-
-    const handleClick = async () => {
-        const stripe = await stripePromise;
-
-        const { error } = await stripe.redirectToCheckout({
-            lineItems: [{
-                price: 'price_1HgG2YD5PErBzWgr43D0lscR', // Replace with your actual price ID from Stripe
-                quantity: 1,
-            }],
-            mode: 'payment',
-            successUrl: window.location.origin + '/success',
-            cancelUrl: window.location.origin + '/cancel',
-        });
-
-        if (error) {
-            console.error('Error:', error);
-        }
-    };
+    const amountToPay = location.state?.amount || 0;
 
     return (
         <div className="min-h-screen bg-gray-100 flex flex-col items-center py-12 px-4">
             <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-md">
-                <h2 className="text-2xl font-bold text-green-500 mb-4 text-center">Complete Your Payment</h2>
-                <button
-                    role="link"
-                    onClick={handleClick}
-                    className="mt-4 w-full px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-700"
-                >
-                    Pay Now
-                </button>
+                <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">Select payment method</h2>
+                <p className="text-center text-gray-600 mb-4">Amount to pay: ₹{amountToPay.toFixed(2)}</p>
+                <div className="space-y-4">
+                    <div className="flex justify-between items-center p-4 border border-gray-300 rounded-lg">
+                        <span className="text-gray-700">Debit or Credit card</span>
+                        <span className="text-blue-500 hover:underline cursor-pointer">Add a card</span>
+                    </div>
+                    <div className="flex justify-between items-center p-4 border border-gray-300 rounded-lg">
+                        <span className="text-gray-700">UPI</span>
+                        <span className="text-blue-500 hover:underline cursor-pointer">Pay via another UPI ID</span>
+                    </div>
+                    <div className="flex justify-between items-center p-4 border border-gray-300 rounded-lg">
+                        <span className="text-gray-700">Wallet</span>
+                        <span className="text-blue-500 hover:underline cursor-pointer">Paytm Payments Bank Wallet</span>
+                    </div>
+                    <div className="flex justify-between items-center p-4 border border-gray-300 rounded-lg">
+                        <span className="text-gray-700">Netbanking</span>
+                        <span className="text-blue-500 hover:underline cursor-pointer">See all banks</span>
+                    </div>
+                    <div className="flex flex-col space-y-2 p-4 border border-gray-300 rounded-lg">
+                        <div className="flex justify-between items-center">
+                            <span className="text-gray-700">Pay after service</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                            <span className="text-gray-700">Pay online after service</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                            <span className="text-gray-700">Pay with cash after service</span>
+                            <span className="text-gray-500">No insurance on cash payment</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
